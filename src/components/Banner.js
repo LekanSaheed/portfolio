@@ -16,7 +16,7 @@ const Banner = () => {
   const v1 = {
     hidden: {
       opacity: 0,
-      x: -100,
+      x: -10,
     },
     visible: {
       opacity: 1,
@@ -26,7 +26,7 @@ const Banner = () => {
   const v2 = {
     hidden: {
       opacity: 0,
-      x: 100,
+      x: 10,
     },
     visible: {
       opacity: 1,
@@ -39,7 +39,7 @@ const Banner = () => {
   const v3 = {
     hidden: {
       opacity: 0,
-      x: -30,
+      x: -10,
     },
     visible: {
       opacity: 1,

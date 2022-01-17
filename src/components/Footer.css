@@ -1,0 +1,23 @@
+.footer {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer_main {
+  background-color: #252934;
+  color: #ffe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  padding: 20px;
+}
+.footer_bottom {
+  padding: 14px;
+  background-color: black;
+  height: 20%;
+  justify-self: flex-end;
+  color: #626366;
+}

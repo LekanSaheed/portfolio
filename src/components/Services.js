@@ -2,45 +2,53 @@ import React from "react";
 import { useGlobalContext } from "./reducers/context";
 import "./Services.css";
 import { motion } from "framer-motion/dist/framer-motion";
+import {
+  SiNextdotjs,
+  SiNodedotjs,
+  SiJavascript,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+} from "react-icons/si";
 const Services = () => {
   const { dark } = useGlobalContext();
 
   const cards = [
     {
       titleText: "Html",
-      icons: "",
+      icons: <SiHtml5 />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "CSS",
-      icons: "",
+      icons: <SiCss3 />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "Javascript",
-      icons: "",
+      icons: <SiJavascript />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "React",
-      icons: "",
+      icons: <SiReact />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "Node js",
-      icons: "",
+      icons: <SiNodedotjs />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "Next js",
-      icons: "",
+      icons: <SiNextdotjs />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
   ];
   const listVariant = {
     hidden: {
       opacity: 0,
-      x: -100,
+      x: -10,
     },
     visible: {
       x: 0,
@@ -66,7 +74,7 @@ const Services = () => {
         dark ? "dark-service" : "light-service"
       }`}
     >
-      <div style={{ marginTop: "20px" }} className="flex-column">
+      <div style={{ marginTop: "20px", gap: "14px" }} className="flex-column">
         <div className="flex-row">
           <div className="line"></div>
           <h1>Toolbox.</h1>
@@ -79,6 +87,7 @@ const Services = () => {
           variants={boxVariant}
           viewPort={{ once: false }}
           className="card-container"
+          style={{ gap: "14px" }}
         >
           {React.Children.toArray(
             cards.map((card) => {
@@ -89,7 +98,7 @@ const Services = () => {
                   className={` toolcard ${dark ? "dark-card" : " "}`}
                   style={{ color: !dark && "white" }}
                 >
-                  <div>{card.icons}</div>
+                  <div className="skill_icon">{card.icons}</div>
                   <div className="bold-text title-text">{card.titleText}</div>
                   <div>{card.text}</div>
                 </motion.div>

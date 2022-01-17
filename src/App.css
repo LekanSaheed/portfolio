@@ -5,6 +5,13 @@
 }
 .darkBg {
   background-color: #020d11;
+  color: #fff !important;
+}
+.darkBg .toolcard {
+  background-color: #020d11 !important;
+  color: #fff !important;
+}
+.darkBg .about-me {
   color: #fff;
 }
 

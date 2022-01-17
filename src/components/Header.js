@@ -3,16 +3,18 @@ import "./Header.css";
 import { useGlobalContext } from "./reducers/context";
 import { motion } from "framer-motion/dist/framer-motion";
 import { Link } from "react-scroll";
+
+export const navLinks = [
+  { text: "HOME", to: "home", icon: "" },
+  { text: "ABOUT", to: "about", icon: "" },
+  { text: "TOOLBOX", to: "toolbox", icon: "" },
+  { text: "WORKS", to: "works", icon: "" },
+  { text: "CONTACT", to: "contact", icon: "" },
+  { text: "FOLLOW", to: "follow", icon: "" },
+];
 const Header = () => {
-  const { dark, setTheme } = useGlobalContext();
-  const navLinks = [
-    { text: "HOME", to: "home", icon: "" },
-    { text: "ABOUT", to: "about", icon: "" },
-    { text: "TOOLBOX", to: "toolbox", icon: "" },
-    { text: "WORKS", to: "works", icon: "" },
-    { text: "CONTACT", to: "contact", icon: "" },
-    { text: "FOLLOW", to: "follow", icon: "" },
-  ];
+  const { dark, setTheme, toggleNav } = useGlobalContext();
+
   const navVariant = {
     hidden: {
       opacity: 0,
@@ -36,6 +38,11 @@ const Header = () => {
     >
       <div className="bold-text">LEKAN SAHEED</div>
 
+      <div onClick={() => toggleNav()}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
       <motion.div
         initial="hidden"
         whileInView="visible"

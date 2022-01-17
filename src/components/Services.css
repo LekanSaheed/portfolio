@@ -12,10 +12,21 @@
   height: 250px;
   background-color: #fafafa;
   color: black !important;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
+.skill_icon {
+  font-size: 50px;
+  color: #e31b6d;
+}
 .toolcard:hover {
-  background-color: rgb(49, 226, 202);
+  background-image: linear-gradient(
+    45deg,
+    rgba(49, 226, 202, 0.329),
+    rgba(44, 233, 208, 0.678)
+  );
+  transition: all 0.5s;
   color: black;
 }
 .title-text {

@@ -2,7 +2,9 @@ import React from "react";
 import "./Myself.css";
 import { motion } from "framer-motion/dist/framer-motion";
 import mypics from "../assets/mypics.jpeg";
+import { useGlobalContext } from "./reducers/context";
 const Myself = () => {
+  const { nav } = useGlobalContext();
   const skills = [
     { skill: "Html", val: 90 },
     { skill: "Css", val: 68 },
@@ -15,7 +17,7 @@ const Myself = () => {
   const rightV = {
     hidden: {
       opacity: 0,
-      x: -300,
+      x: -10,
     },
     visible: {
       opacity: 1,
@@ -30,7 +32,7 @@ const Myself = () => {
   const leftV = {
     hidden: {
       opacity: 0,
-      x: 20,
+      x: 10,
     },
     visible: {
       opacity: 1,
@@ -56,7 +58,7 @@ const Myself = () => {
         <div className="about-me">
           <b>ME</b>
           <p>
-            A passionate self-motivator, interested in solving problems through
+            Self-Hyped inventor, passionate about solving problems through
             creativity.
           </p>
         </div>
