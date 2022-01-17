@@ -2,9 +2,8 @@ import React from "react";
 import "./Myself.css";
 import { motion } from "framer-motion/dist/framer-motion";
 import mypics from "../assets/mypics.jpeg";
-import { useGlobalContext } from "./reducers/context";
+// import { useGlobalContext } from "./reducers/context";
 const Myself = () => {
-  const { nav } = useGlobalContext();
   const skills = [
     { skill: "Html", val: 90 },
     { skill: "Css", val: 68 },
