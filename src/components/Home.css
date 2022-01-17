@@ -68,7 +68,7 @@
   margin: 30px 0;
 
   transition: 0.4s;
-  gap: 20px;
+  gap: 8px;
   box-sizing: border-box;
   font-size: 12px;
   font-weight: 600;
@@ -89,6 +89,9 @@
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
+}
+.card_icons {
+  font-size: 40px;
 }
 
 .light-card {

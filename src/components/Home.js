@@ -3,23 +3,26 @@ import { useGlobalContext } from "./reducers/context";
 import "./Home.css";
 import About from "./About";
 import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { BiBrain } from "react-icons/bi";
+import { IoHardwareChipOutline } from "react-icons/io5";
 const Home = () => {
   const { dark } = useGlobalContext();
 
   const cards = [
     {
       titleText: "Future Concept",
-      icons: "",
+      icons: <IoHardwareChipOutline />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "The Big Ideas",
-      icons: "",
+      icons: <HiOutlineLightBulb />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
     {
       titleText: "Creative Solution",
-      icons: "",
+      icons: <BiBrain />,
       text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
     },
   ];
@@ -75,7 +78,7 @@ const Home = () => {
                       className={` card ${dark ? "dark-card" : "light-card"}`}
                       style={{ color: !dark && "white" }}
                     >
-                      <div>{card.icons}</div>
+                      <div className="card_icons">{card.icons}</div>
                       <div className="bold-text">{card.titleText}</div>
                       <div className="line"></div>
                       <div style={{ textAlign: "center" }}>{card.text}</div>
