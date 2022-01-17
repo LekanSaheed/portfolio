@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.darkBg {
+  background-color: #020d11;
+  color: #fff;
+}
+
+.light-text {
+  color: white !important;
+}
+.theme-text {
+  color: rgb(49, 226, 202);
+}
+.bold-text {
+  font-weight: 700;
+}
+.bordered {
+  border: solid 3px #e31b6d;
+}

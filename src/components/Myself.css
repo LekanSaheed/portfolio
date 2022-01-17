@@ -1,0 +1,112 @@
+.img-me {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* filter: drop-shadow(inset 0 0 2px #e31b6d); */
+}
+.img-me img {
+  width: 84%;
+  /* box-shadow: inset 0 0 10px red; */
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 20%,
+    100% 70%,
+    80% 100%,
+    20% 100%,
+    0% 70%,
+    0% 20%
+      /* 30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30% */
+  );
+}
+.my_container {
+  display: flex;
+  flex-direction: column;
+}
+.detail_container {
+  padding: 10px;
+}
+.about-me {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.897);
+  font-size: 14px;
+  text-align: center;
+  padding: 15px;
+}
+.about-me b {
+  font-weight: 800;
+  padding-bottom: 15px;
+  display: block;
+  font-size: 27px;
+}
+progress[value] {
+  height: 30px;
+  /* margin-bottom: 15px; */
+  width: 350px;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #bababa;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+progress[value]::-webkit-progress-value {
+  background-color: #e31b6d;
+  background-image: -webkit-linear-gradient(
+    -45deg,
+    transparent 33%,
+    #e31b6d 33%,
+    #e31ba7 66%,
+    transparent 66%
+  );
+  border-top-right-radius: 10px;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 10px;
+  /* box-shadow: 10px 10px 10x 10px inset; */
+  /* background-size: 35px 20px, 100% 100%, 100% 100%; */
+}
+progress[value] {
+  animation: stripes 0.9s linear infinite;
+  -webkit-animation: stripes 0.9s linear infinite;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+progress::before {
+  content: attr(data-text);
+  position: absolute;
+  font-weight: 600;
+  top: 4px;
+}
+@keyframes stripes {
+  100% {
+    background-position: -100px 0px;
+  }
+}
+@-webkit-keyframes stripes {
+  100% {
+    background-position: -100px 0px;
+  }
+}
+@media (min-width: 901px) {
+  .my_container {
+    flex-direction: row;
+  }
+  .img-me {
+    width: 50%;
+  }
+  .img-me img {
+    width: 70%;
+  }
+}

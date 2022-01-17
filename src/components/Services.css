@@ -1,0 +1,23 @@
+.service-container {
+  min-height: 200px;
+}
+.dark-service {
+  background-color: rgb(15, 28, 32);
+  color: white;
+}
+.toolcard {
+  border-bottom: 3px solid #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 250px;
+  background-color: #fafafa;
+  color: black !important;
+}
+
+.toolcard:hover {
+  background-color: rgb(49, 226, 202);
+  color: black;
+}
+.title-text {
+  font-weight: 700 !important;
+}
