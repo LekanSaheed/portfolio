@@ -16,6 +16,9 @@ const ThemeProvider = ({ children }) => {
   const toggleNav = () => {
     dispatch({ type: "TOGGLE_NAV" });
   };
+  const setBlockUser = (acc) => {
+    dispatch({ type: "SET_BA", payload: acc });
+  };
 
   return (
     <ThemeContext.Provider
@@ -23,6 +26,7 @@ const ThemeProvider = ({ children }) => {
         setTheme,
         ...state,
         toggleNav,
+        setBlockUser,
       }}
     >
       {children}

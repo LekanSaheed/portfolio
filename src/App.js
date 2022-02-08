@@ -7,11 +7,17 @@ import MobileNav from "./components/MobileNav";
 import { useGlobalContext } from "./components/reducers/context";
 import Services from "./components/Services";
 import Works from "./components/Works";
-
+import React from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   const { dark } = useGlobalContext();
+  React.useEffect(() => {
+    // getMask();
+  }, []);
   return (
     <div className={dark ? "darkBg" : undefined}>
+      <ToastContainer theme="dark" />
       <Banner />
       {/* <div style={{ height: "100vh", background: "red" }}>
         {" "}
@@ -20,7 +26,7 @@ const App = () => {
       </div> */}
       <Header />
       <MobileNav />
-      <Home />
+      <Home connectEth={null} />
       <Services />
       <Works />
       <Footer />

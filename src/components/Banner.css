@@ -32,5 +32,6 @@
 @media (min-width: 901px) {
   .intro {
     font-size: 45px;
+    line-height: 60px;
   }
 }

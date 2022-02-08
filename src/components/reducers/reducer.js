@@ -11,4 +11,10 @@ export const reducer = (state, action) => {
       nav: !state.nav,
     };
   }
+  if (action.type === "SET_BA") {
+    return {
+      ...state,
+      blockUser: action.payload,
+    };
+  }
 };

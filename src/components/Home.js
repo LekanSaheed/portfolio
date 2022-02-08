@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { BiBrain } from "react-icons/bi";
 import { IoHardwareChipOutline } from "react-icons/io5";
-const Home = () => {
+const Home = ({ connectEth }) => {
   const { dark } = useGlobalContext();
 
   const cards = [
@@ -54,7 +54,7 @@ const Home = () => {
     >
       <div style={{ height: "auto" }}>
         <div className={`transit ${dark ? "home-group" : ""}`}>
-          <About />
+          <About connectEth={connectEth} />
         </div>
 
         {/* Cards here */}

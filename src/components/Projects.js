@@ -9,12 +9,9 @@ import { AiOutlineGithub } from "react-icons/ai";
 import {
   SiNextdotjs,
   SiNodedotjs,
-  SiJavascript,
   SiReact,
-  SiHtml5,
   SiFirebase,
   SiMaterialui,
-  SiCss3,
 } from "react-icons/si";
 const Projects = () => {
   const projects = [
@@ -86,7 +83,25 @@ const Projects = () => {
       link: "hoolaa.vercel.app",
       desc: "Get the party started, make reservations and jump right into the party",
       source: "hoolaa",
-      tools: ["React", "NextJs", "MUI", "Firebase", "Node"],
+      tools: [
+        {
+          name: "React",
+          icon: <SiReact />,
+        },
+
+        {
+          name: "MUI",
+          icon: <SiMaterialui />,
+        },
+        {
+          name: "Node",
+          icon: <SiNodedotjs />,
+        },
+        {
+          name: "Firebase",
+          icon: <SiFirebase />,
+        },
+      ],
     },
     {
       img: payroll,

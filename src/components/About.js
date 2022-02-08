@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion/dist/framer-motion";
 import "./About.css";
 import Myself from "./Myself";
-const About = () => {
+const About = ({ connectEth }) => {
   return (
     <motion.div id="about">
       <motion.div
@@ -32,7 +32,7 @@ const About = () => {
           viewport={{ once: false }}
         ></motion.div>
       </motion.div>
-      <Myself />
+      <Myself connectEth={connectEth} />
     </motion.div>
   );
 };

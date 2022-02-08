@@ -14,10 +14,35 @@
   height: 80%;
   padding: 20px;
 }
+.footer_main_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer_links {
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-weight: 600;
+}
 .footer_bottom {
   padding: 14px;
   background-color: black;
   height: 20%;
   justify-self: flex-end;
   color: #626366;
+}
+.imd_node {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 901px) {
+  .footer_main {
+    flex-direction: row;
+  }
+  .footer_main_flex {
+    flex-basis: 33.3%;
+  }
 }
