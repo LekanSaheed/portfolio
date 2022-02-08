@@ -1,19 +1,27 @@
 .service-container {
   min-height: 200px;
 }
+.tool-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .dark-service {
-  background-color: rgb(15, 28, 32);
+  background-color: rgb(25, 25, 31);
   color: white;
 }
 .toolcard {
   border-bottom: 3px solid #fff;
   box-sizing: border-box;
   padding: 20px;
-  height: 250px;
+  height: auto;
   background-color: #fafafa;
   color: black !important;
   transition: all 0.5s;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .skill_icon {
@@ -31,4 +39,21 @@
 }
 .title-text {
   font-weight: 700 !important;
+  margin-bottom: 10px;
+}
+.skill_text {
+  font-size: 13px;
+}
+@media (min-width: 600px) {
+  .toolcard {
+    height: 180px;
+  }
+}
+@media (min-width: 901px) {
+  .tool-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .toolcard {
+    min-height: 210px;
+  }
 }

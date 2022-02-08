@@ -80,11 +80,20 @@ a {
 li {
   list-style-type: none;
 }
+@media (min-width: 767px) and (max-width: 800px) {
+  .bars {
+    display: none;
+  }
+  .alink {
+    font-size: 12px !important;
+  }
+}
 @media (min-width: 767px) {
   .header {
     padding: 15px;
   }
   .nav-container {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }

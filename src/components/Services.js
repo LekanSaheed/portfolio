@@ -17,7 +17,7 @@ const Services = () => {
     {
       titleText: "Html",
       icons: <SiHtml5 />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "Markup language for websites. Seems ugly but beatiful to learn",
     },
     {
       titleText: "CSS",
@@ -27,22 +27,22 @@ const Services = () => {
     {
       titleText: "Javascript",
       icons: <SiJavascript />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "The big boss of the web language, handles everything quite well, has lot of haters but its users are quite large.",
     },
     {
       titleText: "React",
       icons: <SiReact />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "Built with javascript. One of the best libraries for building SPAs",
     },
     {
       titleText: "Node js",
       icons: <SiNodedotjs />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "Built on JS v8 Engine, you can run js outside the browser.",
     },
     {
       titleText: "Next js",
       icons: <SiNextdotjs />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "My favorite. Built on top of React, it adds to React what the React team failed to.",
     },
   ];
   const listVariant = {
@@ -86,7 +86,7 @@ const Services = () => {
           whileInView="visible"
           variants={boxVariant}
           viewPort={{ once: false }}
-          className="card-container"
+          className="tool-container"
           style={{ gap: "14px" }}
         >
           {React.Children.toArray(
@@ -100,7 +100,7 @@ const Services = () => {
                 >
                   <div className="skill_icon">{card.icons}</div>
                   <div className="bold-text title-text">{card.titleText}</div>
-                  <div>{card.text}</div>
+                  {/* <div className="skill_text">{card.text}</div> */}
                 </motion.div>
               );
             })

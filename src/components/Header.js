@@ -3,6 +3,7 @@ import "./Header.css";
 import { useGlobalContext } from "./reducers/context";
 import { motion } from "framer-motion/dist/framer-motion";
 import { Link } from "react-scroll";
+import { BsCloudMoon, BsCloudSun } from "react-icons/bs";
 
 export const navLinks = [
   { text: "HOME", to: "home", icon: "" },
@@ -38,7 +39,7 @@ const Header = () => {
     >
       <div className="bold-text">LEKAN SAHEED</div>
 
-      <div onClick={() => toggleNav()}>
+      <div className="bars" onClick={() => toggleNav()}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
@@ -71,7 +72,17 @@ const Header = () => {
             );
           })
         )}
-        <button onClick={() => setTheme()}>{dark ? "🔆" : "🌙"}</button>
+        <div
+          style={{
+            fontSize: "25px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onClick={() => setTheme()}
+        >
+          {dark ? <BsCloudSun /> : <BsCloudMoon />}
+        </div>
       </motion.div>
     </motion.div>
   );

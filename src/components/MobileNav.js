@@ -24,6 +24,25 @@ const MobileNav = () => {
       },
     },
   };
+  const listV = {
+    closed: {
+      opacity: 0,
+      backgroundColor: "#000",
+      x: 100,
+      staggerChildren: 0.07,
+      staggerDirection: -1,
+    },
+    open: {
+      // opacity: 1,
+      backgroundColor: "transparent",
+      x: 0,
+      opacity: 1,
+      // width: 320,
+      transition: {
+        staggerChildren: 0.07,
+      },
+    },
+  };
   return (
     <AnimatePresence>
       {nav && (
@@ -44,7 +63,7 @@ const MobileNav = () => {
           </div>
           {navLinks.map((nav, id) => {
             return (
-              <motion.div variants={navV} key={id}>
+              <motion.div variants={listV} key={id}>
                 <Link to={nav.to} smooth offset={-90} spy={true}>
                   {nav.text}
                 </Link>
