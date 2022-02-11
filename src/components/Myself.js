@@ -1,7 +1,7 @@
 import React from "react";
 import "./Myself.css";
 import { motion } from "framer-motion/dist/framer-motion";
-import mypics from "../assets/mypics.jpeg";
+import mypics from "../assets/me.JPG";
 import { toast } from "react-toastify";
 import { useGlobalContext } from "./reducers/context";
 import SocialLink from "./SocialLink";
@@ -114,7 +114,7 @@ const Myself = () => {
                 style={{
                   display: "flex",
 
-                  marginBottom: "20px",
+                  marginBottom: "25px",
                 }}
               >
                 <motion.div

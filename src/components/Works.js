@@ -1,9 +1,10 @@
 import { motion } from "framer-motion/dist/framer-motion";
 import React from "react";
 import Projects from "./Projects";
+import Note from "./Note";
 const Works = () => {
   return (
-    <div className="main-section" id="works">
+    <div style={{ marginBottom: "100px" }} className="main-section" id="works">
       <motion.div>
         <div className="flex-row">
           <div className="line"></div>
@@ -11,6 +12,7 @@ const Works = () => {
         </div>
         <span className="theme-text bold-text">PROJECTS I'VE WORKED ON.</span>
       </motion.div>
+      <Note note="Hover on a project to view project details" />
       <Projects />
     </div>
   );

@@ -37,7 +37,7 @@ const Projects = () => {
     },
     {
       img: payroll,
-      name: "Upayroll",
+      name: "Payroll by Uhuru",
       link: "payroll.uhurupay.ng",
       desc: "Payroll system powered by Uhuru group",
       tools: [
@@ -137,72 +137,82 @@ const Projects = () => {
     >
       {projects.map((project, id) => {
         return (
-          <motion.div
-            variants={contV}
-            // whileInView="visible"
-            className="project"
-            key={id}
-            style={{ backgroundImage: `url(${project.img})` }}
-          >
-            {/* <img src={project.img} alt={project.name} /> */}
-            <div className="desc_container">
-              <div className="project_desc">
-                <div className="desc">{project.desc}</div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: project.source ? "space-between" : "center",
-                    alignItems: "center",
-                    padding: "15px",
-                    width: "100%",
-                  }}
-                >
-                  <a
-                    className="link_btn"
-                    href={"https://" + project.link}
-                    target="_blank"
-                    rel="noreferrer"
+          <motion.div className="project_node_cont" key={id} variants={contV}>
+            <div className="project_name"> {project.name}</div>
+            <motion.div
+              variants={contV}
+              // whileInView="visible"
+              className="project"
+              key={id}
+              style={{ backgroundImage: `url(${project.img})` }}
+            >
+              {/* <img src={project.img} alt={project.name} /> */}
+              <div className="desc_container">
+                <div className="project_desc">
+                  <div className="desc">{project.desc}</div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: project.source
+                        ? "space-between"
+                        : "center",
+                      alignItems: "center",
+                      padding: "15px",
+                      width: "100%",
+                    }}
                   >
-                    View
-                    <span
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "0 10px",
-                        fontSize: "20px",
-                      }}
+                    <a
+                      className="link_btn"
+                      href={"https://" + project.link}
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      <HiArrowRight />
-                    </span>
-                  </a>
-                  {project.source && (
-                    <a href={`github.com/${project.source}`} className="github">
-                      <AiOutlineGithub className="git_icon" />
+                      View Live
+                      <span
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+
+                          fontSize: "15px",
+                        }}
+                      >
+                        <HiArrowRight />
+                      </span>
                     </a>
-                  )}
+                    {project.source && (
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={`https://github.com/lekansaheed/${project.source}`}
+                        className="github"
+                      >
+                        <AiOutlineGithub className="git_icon" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+                <div className="project_tool">
+                  {project.tools &&
+                    project.tools.map((t, id) => {
+                      return (
+                        <span key={id}>
+                          <span
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "1px",
+                            }}
+                          >
+                            {t.icon}
+                            {t.name}
+                          </span>
+                        </span>
+                      );
+                    })}
                 </div>
               </div>
-              <div className="project_tool">
-                {project.tools &&
-                  project.tools.map((t, id) => {
-                    return (
-                      <span key={id}>
-                        <span
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "1px",
-                          }}
-                        >
-                          {t.icon}
-                          {t.name}
-                        </span>
-                      </span>
-                    );
-                  })}
-              </div>
-            </div>
+            </motion.div>
           </motion.div>
         );
       })}

@@ -101,12 +101,25 @@
 .light-card .line {
   background-color: #000 !important;
 }
-@media (min-width: 800px) {
-  .bars {
-    display: none;
+@media (min-width: 690px) {
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    justify-items: center;
+    align-content: center;
+    grid-gap: 5px;
   }
 }
+
 @media (min-width: 901px) {
+  .card {
+    width: 210px;
+    height: 210px;
+  }
   .main-section {
     /* display: grid;
     grid-template-columns: 200px auto 200px; */
@@ -114,9 +127,9 @@
     padding-top: 100px;
   }
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-gap: 20px;
+    justify-content: none;
+    grid-gap: 0px;
+    gap: 0px;
     margin-top: 30px;
   }
   .big-intro {

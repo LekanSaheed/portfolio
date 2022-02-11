@@ -135,7 +135,11 @@ progress::before {
     background-position: -100px 0px;
   }
 }
-@media (min-width: 502px) {
+
+@media (min-width: 502px) and (max-width: 901px) {
+  .img-me img {
+    width: 50%;
+  }
   .detail_container {
     align-items: center;
   }
@@ -146,6 +150,7 @@ progress::before {
   }
   .my_container {
     flex-direction: row;
+    gap: 20px;
   }
   .img-me {
     width: 70%;

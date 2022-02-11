@@ -1,15 +1,25 @@
 .project {
-  width: 100%;
-
+  width: 350px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 300px;
   transition: 0.8s;
 }
-
+.project_node_cont {
+  box-shadow: 0 14px 20px rgba(0 0 0/10%);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media (max-width: 350px) {
+  .project {
+    width: 85%;
+  }
+}
 .project_desc {
   height: 88%;
   width: 100%;
@@ -22,9 +32,23 @@
 .desc {
   padding: 20px;
   text-align: center;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 13px;
   line-height: 20px;
+}
+.note {
+  padding: 25px 13px;
+  width: 350px;
+  background: rgba(30, 143, 255, 0.15);
+  border: solid 1px dodgerblue;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7b8190;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 .project_tool {
   text-transform: uppercase;
@@ -35,21 +59,27 @@
   align-items: center;
   gap: 10px;
   font-weight: 400;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   font-size: 11px;
   padding-left: 10px;
   border-top: solid 2px #e31b6d;
 }
 .desc_container {
   height: 100%;
-  transition: 0.3s;
+  transition: 0.5s;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* display: none; */
   /* padding: 10px; */
 }
 .project:hover .desc_container {
   /* position: relative; */
   opacity: 1;
-  transition: 0.3s;
+  /* display: block; */
+  transition: 0.5s;
 }
 .project:hover {
   /* background-position: bottom; */
@@ -66,12 +96,22 @@
 .project_container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 100px;
   align-items: center;
   justify-content: center;
+  padding: 30px 0;
 }
+.project_name {
+  padding: 10px 15px;
+  background-color: #242526;
+  color: #ee1c74;
+  font-weight: 600;
+  font-size: 11px;
+  border-bottom: solid 2px #ee1c74;
+}
+
 .link_btn {
-  background-color: #04c2c9;
+  background: linear-gradient(#04c2c9, #04c2c9);
   color: black;
   font-weight: 700;
   padding: 8px 15px;
@@ -80,27 +120,57 @@
   display: flex;
   align-items: center;
   width: auto;
-  gap: 10px;
+  gap: 6px;
   /* margin-top: -55px; */
   position: relative;
   z-index: 1;
   box-shadow: 0 0 10px 0 rgba(0 0 0/17%);
   border-radius: 10px;
+  transition: 0.1s;
+}
+.link_btn:hover {
+  background: linear-gradient(to right, #04d9e0, #23f4fb);
+  transition: all 0.1s;
+  box-shadow: 0 0 0 2px #ee1c74;
 }
 .git_icon {
   font-size: 20px;
   color: #fff;
+  transition: all 0.3s;
+  border-radius: 5px;
 }
-
-@media (min-width: 902px) {
-  .project {
-    width: auto;
-  }
+.github {
+  background: #ee1c74;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.github:hover {
+  background: #fb428f;
+  transform: scale(1.03);
+  transition: all 0.3s;
+  box-shadow: 0 0 0 2px #242526;
+}
+.github:hover .git_icon {
+  color: #4d4e50;
+  transition: all 0.3s;
+}
+@media (min-width: 767px) {
   .project_container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-
-    gap: 20px;
+    gap: 15px;
+  }
+  .project {
+    width: 100%;
+  }
+}
+@media (min-width: 902px) {
+  .project_container {
+    gap: 50px;
   }
   .project img {
     width: 100%;

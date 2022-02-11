@@ -13,17 +13,17 @@ const Home = ({ connectEth }) => {
     {
       titleText: "Future Concept",
       icons: <IoHardwareChipOutline />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "Out of earth technological innovations.",
     },
     {
       titleText: "The Big Ideas",
       icons: <HiOutlineLightBulb />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "Innovation through imagination.",
     },
     {
       titleText: "Creative Solution",
       icons: <BiBrain />,
-      text: "Nulla sint dolor nisi est sit laborum culpa nostrud ipsum.",
+      text: "Creative approach to common problems.",
     },
   ];
   const boxV = {

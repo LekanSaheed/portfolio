@@ -3,7 +3,7 @@ import "./Header.css";
 import { useGlobalContext } from "./reducers/context";
 import { motion } from "framer-motion/dist/framer-motion";
 import { Link } from "react-scroll";
-import { BsCloudMoon, BsCloudSun } from "react-icons/bs";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 export const navLinks = [
   { text: "HOME", to: "home", icon: "" },
@@ -11,7 +11,7 @@ export const navLinks = [
   { text: "TOOLBOX", to: "toolbox", icon: "" },
   { text: "WORKS", to: "works", icon: "" },
   { text: "CONTACT", to: "contact", icon: "" },
-  { text: "FOLLOW", to: "follow", icon: "" },
+  // { text: "FOLLOW", to: "follow", icon: "" },
 ];
 const Header = () => {
   const { dark, setTheme, toggleNav } = useGlobalContext();
@@ -37,12 +37,27 @@ const Header = () => {
       transition={{ when: "beforeChildren" }}
       className={`header ${dark && "darkHeader light-text"} transit`}
     >
-      <div className="bold-text">LEKAN SAHEED</div>
-
-      <div className="bars" onClick={() => toggleNav()}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+      <div className="linear_cover">
+        {" "}
+        <div className="bold-text logo">LEKAN SAHEED</div>
+      </div>
+      <div className="mobile_theme_toggle">
+        <div
+          style={{
+            fontSize: "25px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onClick={() => setTheme()}
+        >
+          {dark ? <BsSun /> : <BsMoon />}
+        </div>
+        <div className="bars" onClick={() => toggleNav()}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </div>
       <motion.div
         initial="hidden"
@@ -63,7 +78,7 @@ const Header = () => {
                   activeClass="active"
                   to={link.to}
                   smooth
-                  offset={-90}
+                  offset={link.text !== "ABOUT" ? -30 : -90}
                   spy={true}
                 >
                   {link.text}
@@ -81,7 +96,7 @@ const Header = () => {
           }}
           onClick={() => setTheme()}
         >
-          {dark ? <BsCloudSun /> : <BsCloudMoon />}
+          {dark ? <BsSun /> : <BsMoon />}
         </div>
       </motion.div>
     </motion.div>

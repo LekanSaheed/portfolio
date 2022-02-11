@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.css";
 import { motion } from "framer-motion/dist/framer-motion";
+import { Link } from "react-scroll";
 const Banner = () => {
   const introVariant = {
     hidden: {
@@ -77,16 +78,18 @@ const Banner = () => {
           whileInView="visible"
           variants={v1}
         >
-          I'm a full-stack web developer
+          I'm a frontend web developer
         </motion.div>
-        <motion.button
-          variants={v3}
-          whileInView="visible"
-          className="btn-view"
-          whileHover={{ scale: 1.03 }}
-        >
-          View My Works{" "}
-        </motion.button>
+        <Link to="works" smooth spy={true} offset={-30}>
+          <motion.button
+            variants={v3}
+            whileInView="visible"
+            className="btn-view"
+            whileHover={{ scale: 1.03 }}
+          >
+            View My Works{" "}
+          </motion.button>
+        </Link>
       </motion.div>
     </div>
   );
